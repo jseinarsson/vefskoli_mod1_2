@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
     border: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
 }
 
 /* Sets up OUTER grid -- rolling marquees and outer frame.
@@ -128,6 +134,51 @@ Different between landscape/portrait */
 }
 
 
+.orange {
+    background-color: orange;
+}
+/* Border marquee styles */
+
+.rotate--90deg {
+    transform: rotate(90deg);
+}
+
+.marquee__container {
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.marquee__text {
+    margin: 3px;
+    font-size: 3vmin;
+    max-height: 90%;
+
+    display: block;
+    width: 200%;
+    position: absolute;
+    overflow: hidden;
+
+    animation: marquee 20s linear infinite;
+    animation-play-state: running;
+    /*background-color: orange;*/
+}
+
+.marquee__text--repeat {
+    float: left;
+    width: 50%;
+}
+
+.marquee__text:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
 /* Repeat use styling elements */
 
 .border {
