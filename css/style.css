@@ -53,14 +53,14 @@ Different between landscape/portrait */
             background: red;
         }
         
-        .inner__yellow {
+        .inner__orange {
             grid-area: 3 / 1 / 6 / 5;
-            background: yellow;
+            background: orange;
         }
         
-        .inner__orange {
+        .inner__yellow {
             grid-area: 6 / 1 / 7 / 4;
-            background: orange;
+            background: yellow;
         }
         
         .inner__green {
@@ -96,14 +96,14 @@ Different between landscape/portrait */
             background: red;
         }
         
-        .inner__yellow {
+        .inner__orange {
             grid-area: 1 / 1 / 4 / 5;
-            background: yellow;
+            background: orange;
         }
         
-        .inner__orange {
+        .inner__yellow {
             grid-area: 1 / 5 / 2 / 8;
-            background: orange;
+            background: yellow;
         }
         
         .inner__green {
@@ -128,11 +128,26 @@ Different between landscape/portrait */
 }
 
 
-/* Border styling element */
+/* Repeat use styling elements */
 
 .border {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
+/* Images */
+
+.img__aliens {
+    background-image: url("/img/aliens_us.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.img__ufo {
+    background-image: url("/img/ufo_wiki.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 
