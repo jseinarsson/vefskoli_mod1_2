@@ -1,0 +1,116 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+/* Sets up OUTER grid -- rolling marquees and outer frame.
+Same in Landscape and Portrait */
+
+.outer__container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 5vmin auto 5vmin;
+    grid-template-columns: 5vmin auto 5vmin;
+}
+
+.outer__top {
+    grid-column: 1 / span 2;
+}
+
+.outer__left {
+    grid-row: 2 / span 2;
+}
+
+.outer__middle {
+    grid-area:  2 / 2 / 3 / 3;
+    background-color: grey;
+}
+
+.outer__right {
+    grid-row: 1 / span 2;
+    grid-column-start: 3;
+}
+
+.outer__bottom {
+    grid-row-start: 3;
+    grid-column: 2 / span 2;
+}
+
+/* Marquee styles */
+
+.marquee__container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.marquee__container--horizontal {
+    align-items: center;
+}
+
+.marquee__container--vertical {
+    justify-content: center;
+}
+
+.marquee__text {
+    display: block;
+    margin: 3px;
+    font-size: 3vmin;
+
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+
+    background-color: orange;
+}
+
+.marquee__text--horizontal {
+    max-height: 90%
+}
+
+.marquee__text--vertical {
+    max-width: 90%;
+}
+
+.rotate90deg {
+    writing-mode: vertical-rl;
+    display: inline-block;
+}
+
+.rotate180deg {
+    transform: rotate(180deg);
+}
+
+.rotate270deg {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+/*
+.rotate90deg {
+    writing-mode: vertical-rl;
+}
+
+.rotate270deg {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.rotate90deg {
+    transform: rotate(90deg);
+    height: 100%;
+    width: 100%;
+    background-color: purple;
+}*/

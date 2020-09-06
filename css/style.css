@@ -133,11 +133,60 @@ Different between landscape/portrait */
         }
 }
 
+/* Border Marquees */
+
+.marquee__container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.marquee__text {
+    display: block;
+    margin: 3px;
+    font-size: 3vmin;
+    max-height: 90%;
+
+    position: absolute;
+    overflow: hidden;
+}
+
+.rotate--270deg {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
 
 .orange {
     background-color: orange;
 }
-/* Border marquee styles */
+
+/* Repeat use styling elements */
+
+.border {
+    border: 2px solid black;
+}
+
+/* Images */
+
+.img__aliens {
+    background-image: url("/img/aliens_us.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.img__ufo {
+    background-image: url("/img/ufo_wiki.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/* Border marquee styles 
 
 .rotate--90deg {
     transform: rotate(90deg);
@@ -163,7 +212,7 @@ Different between landscape/portrait */
 
     animation: marquee 20s linear infinite;
     animation-play-state: running;
-    /*background-color: orange;*/
+    background-color: orange;
 }
 
 .marquee__text--repeat {
@@ -179,26 +228,7 @@ Different between landscape/portrait */
     0% { left: 0; }
     100% { left: -100%; }
   }
-/* Repeat use styling elements */
 
-.border {
-    border: 2px solid black;
-}
-
-/* Images */
-
-.img__aliens {
-    background-image: url("/img/aliens_us.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.img__ufo {
-    background-image: url("/img/ufo_wiki.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+  */
 
 
