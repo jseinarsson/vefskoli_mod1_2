@@ -72,6 +72,7 @@ Same in Landscape and Portrait */
     overflow: hidden;
     white-space: nowrap;
 
+
     background-color: orange;
 }
 
@@ -81,6 +82,11 @@ Same in Landscape and Portrait */
 
 .marquee__text--vertical {
     max-width: 90%;
+}
+
+.marquee__text--repeat {
+    float: left;
+    width: 50%;
 }
 
 .rotate90deg {
@@ -98,19 +104,32 @@ Same in Landscape and Portrait */
     display: inline-block;
 }
 
-/*
-.rotate90deg {
-    writing-mode: vertical-rl;
+.marquee__animate--horizontal {
+    width: 200%;
+    animation: marquee--horizontal 20s linear infinite;
+    animation-play-state: running;
 }
 
-.rotate270deg {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+.marquee__animate--horizontal:hover {
+    animation-play-state: paused;
 }
 
-.rotate90deg {
-    transform: rotate(90deg);
-    height: 100%;
-    width: 100%;
-    background-color: purple;
-}*/
+@keyframes marquee--horizontal {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+
+.marquee__animate--vertical {
+    height: 200%;
+    animation: marquee--vertical 20s linear infinite;
+    animation-play-state: running;
+}
+
+.marquee__animate--vertical:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee--vertical {
+    0% {top: 0;}
+    100% {top: -100%;}
+}
