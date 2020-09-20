@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 * {
     border: 0;
     margin: 0;
@@ -8,8 +7,22 @@
 }
 
 body {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 12px;
 }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 6px;
+    }
+}
+
+/* Repeat use styling elements */
+
+.border {
+    border: 2px solid black;
+}
+
 
 /* Sets up OUTER grid -- rolling marquees and outer frame.
 Same in Landscape and Portrait */
@@ -45,7 +58,8 @@ Same in Landscape and Portrait */
 }
 
 /* Sets up INNER grid
-Different between landscape/portrait */
+Different between landscape/portrait 
+These are named after colors from when I was setting up the grid*/
 
 @media (orientation: portrait) {
         .inner__container {
@@ -56,37 +70,30 @@ Different between landscape/portrait */
         
         .inner__red {
             grid-area: 1 / 1 / 3 / 5;
-            background: red;
         }
         
         .inner__orange {
             grid-area: 3 / 1 / 6 / 5;
-            background: orange;
         }
         
         .inner__yellow {
             grid-area: 6 / 1 / 7 / 4;
-            background: yellow;
         }
         
         .inner__green {
             grid-area: 6 / 4 / 7 / 5;
-            background: green;
         }
         
         .inner__blue {
             grid-area: 7 / 1 / 11 / 3;
-            background: blue;
         }
         
         .inner__indigo {
             grid-area: 7 / 3 / 10 / 5;
-            background: indigo;
         }
         
         .inner__violet {
             grid-area: 10 / 3 / 11 / 5;
-            background: violet;
         }
 }
 
@@ -99,37 +106,30 @@ Different between landscape/portrait */
         
         .inner__red {
             grid-area: 4 / 1 / 6 / 5;
-            background: red;
         }
         
         .inner__orange {
             grid-area: 1 / 1 / 4 / 5;
-            background: orange;
         }
         
         .inner__yellow {
             grid-area: 1 / 5 / 2 / 8;
-            background: yellow;
         }
         
         .inner__green {
             grid-area: 1 / 8 / 2 / 9;
-            background: green;
         }
         
         .inner__blue {
             grid-area: 2 / 5 / 6 / 7;
-            background: blue;
         }
         
         .inner__indigo {
             grid-area: 2 / 7 / 5 / 9;
-            background: indigo;
         }
         
         .inner__violet {
             grid-area: 5 / 7 / 6 / 9;
-            background: violet;
         }
 }
 
@@ -212,11 +212,92 @@ Different between landscape/portrait */
     100% {top: -100%;}
 }
 
-/* Repeat use styling elements */
-
-.border {
-    border: 2px solid black;
+/* Title */
+.title__container {
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.title {
+    color: black;
+    width: 100%;
+    height: 100%;
+    font-weight: 200;
+    font-size: 12.5vmin;
+    line-height: 11vmin;
+    font-style: italic;
+    padding: 5vmin;
+}
+
+.title>span {
+    font-weight: 500;
+}
+
+.title>span:hover {
+    text-decoration: line-through #0f0;
+}
+
+/* Defintion */
+
+.definition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.definition__title {
+    width: 100%;
+    font-size: 2em;
+}
+
+.definition__text {
+    font-size: 1.5em;
+}
+
+.definition__text:hover {
+    transform: scale(-1, 1);
+    color: #0f0;
+}
+
+/* Sightings */
+
+.sighting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 1.1em;
+    overflow: scroll;
+    height: 100%;
+}
+
+.sighting__rec {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+
+.sighting__date {
+    width: 100%;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.sighting:hover {
+    background: #0f0;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+
 
 /* Images */
 
@@ -234,4 +315,30 @@ Different between landscape/portrait */
     background-size: cover;
 }
 
+
+/* Alien SVG */
+
+.img__svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alien {
+    height: 90%;
+}
+
+.alien:hover > .alien__lime {
+    fill: #0f0;
+    mix-blend-mode: multiply;
+    transition: all 0.2s ease;
+    transform: translate(-10%);
+}
+
+.alien:hover > .alien__purple{
+    fill: #f0f;
+    mix-blend-mode: multiply;
+    transition: all 0.2s ease;
+    transform: translate(10%);
+}
 
